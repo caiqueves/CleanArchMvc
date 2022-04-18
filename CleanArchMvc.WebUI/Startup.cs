@@ -43,6 +43,10 @@ namespace CleanArchMvc.WebUI
 
             app.UseRouting();
 
+            seedUserRoleInitial.SeedRoles();
+            seedUserRoleInitial.SeedUsers();
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
